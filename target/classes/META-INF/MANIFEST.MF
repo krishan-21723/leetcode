@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: nb-cart-manager
+Implementation-Title: leetcode
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: krishanchhimpa
-Implementation-Vendor-Id: com.nearbuy
+Implementation-Vendor-Id: krishan21712
 Build-Jdk: 1.8.0_221
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
- ot-starter-parent/nb-cart-manager
+ ot-starter-parent/leetcode
 Created-By: Maven Integration for Eclipse
 
