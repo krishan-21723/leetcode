@@ -3,22 +3,20 @@ package leetcode.problems.easy;
 public class ClimbingStairs {
 
 	public static void main(String[] args) {
-		System.out.println(climbStairsRecursive(3));
-		System.out.println(climbStairsDP(3));
+		int[] arr = new int[] { 1, 100, 1, 1, 1, 100, 1, 1, 100, 1 };
+		System.out.println(minimumCost(arr, arr.length));
 	}
 
-	public static int climbStairsRecursive(int n) {
-		if (n == 1 || n == 0)
-			return 1;
-		return climbStairsRecursive(n - 1) + climbStairsRecursive(n - 2);
-	}
-
-	public static int climbStairsDP(int n) {
-		int[] arr = new int[n + 1];
-		arr[0] = arr[1] = 1;
-		for (int i = 2; i <= n; i++) {
-			arr[i] = arr[i - 1] + arr[i - 2];
+	static int minimumCost(int cost[], int n) {
+		int res[] = new int[n];
+		if (n == 1)
+			return cost[0];
+		res[0] = cost[0];
+		res[1] = cost[1];
+		for (int i = 2; i < n; i++) {
+			res[i] = Math.min(res[i - 1], res[i - 2]) + cost[i];
 		}
-		return arr[n];
+		return Math.min(res[n - 2], res[n - 1]);
 	}
+
 }
